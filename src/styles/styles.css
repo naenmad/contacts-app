@@ -1,0 +1,347 @@
+:root {
+  --primary-color: #4361ee;
+  --secondary-color: #3f37c9;
+  --danger-color: #ef233c;
+  --background-color: #f8f9fa;
+  --text-color: #2b2d42;
+  --gradient-start: #6a11cb;
+  --gradient-end: #2575fc;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  color: var(--text-color);
+  line-height: 1.6;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+.contact-app {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.contact-app h1 {
+  font-weight: normal;
+  font-size: 48px;
+  margin-bottom: 32px;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  border: none;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-item__image img {
+  width: 64px;
+  border-radius: 50%;
+}
+
+.contact-item__body {
+  margin-left: 16px;
+  padding-left: 16px;
+  border-left: 1px solid #ddd;
+  flex: 1;
+}
+
+.contact-item__title {
+  padding: 4px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.contact-item__username {
+  font-weight: lighter;
+  color: #555;
+}
+
+.contact-item__label {
+  display: block;
+  margin: 8px 0 4px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.contact-item__input {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  font-family: 'Inter', sans-serif;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-item__input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px rgba(67, 97, 238, 0.5);
+  outline: none;
+}
+
+.contact-item__delete {
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  background-color: var(--danger-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-item__delete:hover {
+  background-color: #d90429;
+  transform: scale(1.05);
+}
+
+.contact-item__edit {
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-right: 8px;
+}
+
+.contact-item__edit:hover {
+  background-color: #2a2a72;
+  transform: scale(1.05);
+}
+
+.contact-item__save {
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 8px;
+}
+
+.contact-item__save:hover {
+  background-color: var(--secondary-color);
+  transform: scale(1.05);
+}
+
+.contact-input {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-input input {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  font-family: 'Inter', sans-serif;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.contact-input input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+.contact-input button {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-input button:hover {
+  background-color: var(--secondary-color);
+  transform: scale(1.02);
+}
+
+.contact-search {
+  width: 100%;
+  padding: 12px;
+  margin: 16px 0;
+  font-family: 'Inter', sans-serif;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.contact-search:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+.error {
+  color: var(--danger-color);
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.contact-icon {
+  display: block;
+  margin: 0 auto 1rem;
+  width: 64px;
+  height: 64px;
+}
+
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .contact-app {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-item__body {
+    margin: 1rem 0;
+    padding: 1rem 0;
+    border-left: none;
+    border-top: 1px solid #ddd;
+  }
+
+  .contact-item__image img {
+    width: 96px;
+  }
+
+  .contact-input {
+    padding: 1rem;
+  }
+
+  .contact-input input {
+    padding: 10px;
+  }
+
+  .contact-input button {
+    padding: 0.8rem;
+  }
+
+  .contact-item__edit,
+  .contact-item__delete,
+  .contact-item__save {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+}
+
+.notification {
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.notification.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.notification.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+@media screen and (max-width: 480px) {
+  .contact-app h1 {
+    font-size: 2rem;
+  }
+
+  .contact-item {
+    padding: 1rem;
+  }
+
+  .contact-input {
+    padding: 0.8rem;
+  }
+
+  .contact-input input {
+    padding: 8px;
+  }
+
+  .contact-input button {
+    padding: 0.6rem;
+  }
+
+  .contact-item__edit,
+  .contact-item__delete,
+  .contact-item__save {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+}
